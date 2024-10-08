@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Bài tập 04</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            label{
+                font-size: 16px;
+                font-weight: 700;
+            }
+            div{
+                margin-bottom: 8px;
+            }
+            .btn-submit{
+                padding: 10px 20px;
+                background-color: blue;
+                border-radius: 3px;
+                font-size: 15px;
+                border: none;
+                color: white;
+                font-weight: 500;
+            }
+            .container{
+                width: 500px;
+                height: 400px;
+                background-color: lightgray;
+                border-radius: 16px;
+                align-items: center;
+                margin-left: 20px;
+                padding-left: 40px;
+                padding-top: 40px;
+                box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.3);
+            }
+            #input-1{
+                width: 200px;
+                height: 22px;
+            }
+            #input-1::placeholder{
+                font-size: 13px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>ĐĂNG KÍ THÔNG TIN</h2><hr>
+            <form action="RegisterServlet" method="POST" enctype="multipart/form-data">
+                <div class="container">
+                    <div>
+                        <label>Họ tên</label><br>
+                        <input type="text" value="" name="hoten" placeholder="Nhập họ tên..." id="input-1"/>
+                    </div>
+                    <div>
+                        <label>Giới tính</label><br>
+                        <input type="radio" name="gioitinh" value="Nam" checked="checked"/>Nam
+                        <input type="radio" name="gioitinh" value="Nữ"/>Nữ
+                    </div>
+                    <div>
+                        <label>Sở thích</label><br>
+                        <input type="checkbox" name="sothich" value="Nghe nhạc"/>Nghe nhạc<br>
+                        <input type="checkbox" name="sothich" value="Xem phim"/>Xem phim<br>
+                        <input type="checkbox" name="sothich" value="Đá bóng"/>Đá bóng<br>
+                        <input type="checkbox" name="sothich" value="Ngủ"/>Ngủ<br>
+                    </div>
+                    <div>
+                        <label>Ảnh đại diện</label><br>
+                        <input type="file" name="anhdaidien"/>
+                    </div>
+                    <div>
+                        <input type="submit" value="Gữi" class="btn-submit"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
